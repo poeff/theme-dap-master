@@ -1,0 +1,8 @@
+#pie_register .fields .radio_wrap {
+    display: inline-block;
+}
+#pie_register .fields input.input_fields[type="checkbox"] {
+    height: auto;
+    width: auto;
+    padding: 0;
+}

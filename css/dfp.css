@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'futura-pt', sans-serif;
+  font-weight: 400;
+}
+a {
+  color: #06569d;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #234f86;
+  text-decoration: underline;
+}
+.btn-primary {
+  background-color: #06569d;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.active {
+  background-color: #234f86;
+}
+form {
+  font-size: 0.889em;
+}
+form label {
+  font-weight: 400;
+}
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin: -4px 8px 0 0;
+  line-height: normal;
+}
+.site-header {
+  padding-top: 15px;
+}
+.site-header .page-title {
+  font-size: 3.278em;
+  line-height: 1;
+  color: #234f86;
+  margin: 0;
+}
+.site-header .tagline {
+  font-size: 2.000em;
+  line-height: 1;
+  letter-spacing: 0.030em;
+  margin-top: 0;
+}
+.site-header p {
+  font-size: 0.889em;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #234f86;
+}
+#content {
+  padding-top: 15px;
+}
+#content .hero {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+#content .donation-form {
+  position: relative;
+  z-index: 2;
+  top: -100px;
+  padding: 30px;
+  margin: 0 15px 15px 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+#content .donation-form #dgx-donate-form #dgx-donate-container {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+#content .donation-form #dgx-donate-form #dgx-donate-container .dgx-donate-form-section {
+  border: 0;
+  padding: 0;
+  margin: 0 0 15px;
+}
+#content .donation-form #dgx-donate-form #dgx-donate-container .dgx-donate-form-section input.horiz {
+  margin-left: 20px;
+}
+.site-footer {
+  padding: 20px 0;
+  font-size: 0.778em;
+}
+.site-footer li > a {
+  border-left: 1px solid #222222;
+  padding-left: 12px;
+}
+@media (max-width: 767px) {
+  .site-header .logo {
+    width: 160px;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+  .site-header .page-title,
+  .site-header .tagline {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .site-header .page-title {
+    font-size: 2.000em;
+  }
+  .site-header .tagline {
+    font-size: 1.195em;
+  }
+  #content .hero {
+    margin-bottom: 15px;
+  }
+  #content .donation-form {
+    top: auto;
+    margin: 15px 0;
+  }
+  #content .donation-form #dgx-donate-form #dgx-donate-container .dgx-donate-form-section input[type="radio"] {
+    margin: -4px 4px 0 0;
+  }
+  #content .donation-form #dgx-donate-form #dgx-donate-container .dgx-donate-form-section input.horiz {
+    margin-left: 8px;
+  }
+}
+@media (max-width: 991px) {
+  .dgx-donate-form-section input.horiz:nth-child(4) {
+    margin-left: 0;
+  }
+}

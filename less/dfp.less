@@ -1,0 +1,218 @@
+// Fonts
+// --------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+// New Variables
+// --------------------------------------------------
+@sans-serif : 'Open Sans', sans-serif;
+@futura : 'futura-pt', sans-serif;
+@key : #222;
+@matte : #F2F2F2;
+@black : #000;
+@white : #fff;
+@l-blue : #06569d;
+@blue : #234f86;
+@base-font : 18px;
+@base-leading : 1.428571429;
+
+// New Mixins
+// --------------------------------------------------
+
+
+// Begin Styles
+// --------------------------------------------------
+body {
+    font-family: @sans-serif;
+    font-size: @base-font;
+    line-height: @base-leading;
+    color: @key;
+    background-color: @matte;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: @futura; font-weight: 400; 
+}
+
+a {
+    color: @l-blue;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: @blue;
+        text-decoration: underline;
+    }
+}
+
+.btn-primary {
+    background-color: @l-blue;
+    &:hover, 
+    &:focus,  
+    &.active {
+        background-color: @blue;    
+    }    
+}
+
+// Forms
+form {
+    font-size: 0.889em;
+    label {
+        font-weight: 400;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin: -4px 8px 0 0;
+        line-height: normal;
+    }
+}
+
+// Header
+.site-header {
+    padding-top: 15px;
+    .page-title {
+        font-size: 3.278em;
+        line-height: 1;
+        color: @blue;
+        margin: 0;
+    }
+    .tagline {
+        font-size: 2.000em;
+        line-height: 1;
+        letter-spacing: 0.030em;
+        margin-top: 0;
+    }
+    p {
+        font-size: 0.889em;
+        line-height: 1.5;
+        font-weight: 600;
+        color: @blue;
+    }
+}
+
+// Page Styles
+#content {
+    padding-top: 15px;
+    .hero {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 40px;
+    }
+    .donation-form {
+        position: relative;
+        z-index: 2;
+        top: -100px;
+        padding: 30px;
+        margin: 0 15px 15px 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 6px fade(@black, 20%);
+        #dgx-donate-form {
+            #dgx-donate-container {
+                padding: 0;
+                margin: 0;
+                background-color: #fff;
+                .dgx-donate-form-section {
+                    border: 0;
+                    padding: 0;
+                    margin: 0 0 15px;
+                    input.horiz {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer
+.site-footer {
+    padding: 20px 0;
+    font-size: 0.778em;
+    li > a {
+        border-left: 1px solid @key;
+        padding-left: 12px;
+    }
+}
+
+
+// Media Queries
+@media (max-width: @screen-xs-max) {
+    .site-header {
+        .logo {
+            width: 160px;
+            height: auto;
+            margin: 0 auto 10px;
+        }
+        .page-title,
+        .tagline {
+            text-align: center;
+            white-space: nowrap;
+        }
+        .page-title {
+            font-size: 2.000em;
+        }
+        .tagline {
+            font-size: 1.195em;
+        }
+    }
+    #content {
+        .hero {
+            margin-bottom: 15px;
+        }
+        .donation-form {
+            top: auto;
+            margin: 15px 0;
+            #dgx-donate-form {
+                #dgx-donate-container {
+                    .dgx-donate-form-section {
+                        input[type="radio"] {
+                            margin: -4px 4px 0 0;
+                        }
+                        input.horiz {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: @screen-sm-max) {
+    .dgx-donate-form-section input.horiz:nth-child(4) {
+        margin-left: 0;
+    }
+}
