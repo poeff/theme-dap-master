@@ -40,6 +40,10 @@ function custom_menu_order( $menu_ord ) {
 add_filter('custom_menu_order', 'custom_menu_order'); 
 add_filter('menu_order', 'custom_menu_order');
 
+// show admin bar only for admins and editors
+if (!current_user_can('edit_posts')) {
+	add_filter('show_admin_bar', '__return_false');
+}
 
 /**
 *   Enable shortcodes
